@@ -1,4 +1,4 @@
-<?php
+##<?php
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
 
@@ -13,6 +13,7 @@ $outp = '{"obj":'.json_encode($rows).'}';
 $cnx->close();
   
 echo($outp);
+##?>
 
 
 # Ag6
