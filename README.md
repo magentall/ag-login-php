@@ -1,3 +1,20 @@
+<?php
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json");
+
+$cnx = new mysqli("servername","sername","password","db_name");
+
+$result = $cnx->query("SELECT * FROM Skillz");
+
+while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
+  $rows[]=$rs;
+  }
+$outp = '{"obj":'.json_encode($rows).'}';
+$cnx->close();
+  
+echo($outp);
+
+
 # Ag6
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
